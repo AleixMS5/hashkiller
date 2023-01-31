@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.Button?>
+<VBox style="-fx-background-color: #171717" alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.hashkiller.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <ImageView fitWidth="150" preserveRatio="true" fx:id="logo" >
+        <image>
+            <Image url="https://upload.wikimedia.org/wikipedia/commons/9/9b/The.Matrix.glmatrix.2.png" />
+        </image>
+    </ImageView>
+    <Label fx:id="resultat" style="-fx-background-color: #a3a3a3" />
+
+    <HBox styleClass="alert" style="-fx-background-color: #a3a3a3">
+        <Label text="Password:"/>
+        <TextField fx:id="contras"/>
+    </HBox>
+    <HBox styleClass="alert" style="-fx-background-color: #a3a3a3" >
+
+        <Label text="Hash:"/>
+        <TextField fx:id="hashs"/>
+    </HBox>
+    <HBox styleClass="alert, alert-success">
+        <Button styleClass="btn, btn-success, middle" text="Introduce password" onAction="#login"/>
+        <Button styleClass="btn, btn-success, middle" text="Check the hash" onAction="#logout"/>
+
+    </HBox>
+</VBox>
